@@ -7,22 +7,61 @@
 <meta name="Description" content="Enter your description here"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/extras/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Slabo+27px&display=swap" rel="stylesheet">
 <title>erin platvoet</title>
+
+<style>
+    .bg-cover{
+    background-image: url("assets/images/jumbotron.jpg");
+    width:fit-content;
+}
+</style>
 </head>
 <body>
 
     <!-- nav bar that moves with scroll with links to contact -->
-
+<center>
     <!-- jumbotron with name -->
-
+<div class="jumbotron bg-cover">
+   erin platvoet
+</div>
     <!-- container with about me -->
+<div class="container">
+    <div class="row sections" id="aboutMe">
+            <h1 class="titles">about me:</h1> <br>
+            Hi! My name is Erin, and I recently changed careers to pursue my web development dreams!<br>
+            I just completed the Full-Stack Web Development Coding Bootcamp at Rutgers University.<br>
+            <br> 
+    </div>
 
     <!-- container with portfolio -->
+<br><br>
+    <div class="row sections" id="myPortfolio">
+        <h1 class="titles">some of my work:</h1> <br>
+        <img id="myImg" src="assets/images/LocalGrub.gif" alt="Local Grub: an app that utilizes the Zomato & MapQuest API to gather local restaurant information based off of the user's city choice. This app was created to help promote small business throughout local communities, and give users that chance to explore restaurants besides the big chains/franchises." style="width:100%;max-width:200px"><br>
 
+<!-- The Modal -->
+            <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+            </div>
+        <br>
+    </div>
     <!-- container with resume -->
-    
+<br><br>
+    <div class="row sections" id="myResume">
+        <h1 class="titles">my resume:</h1> <br>
+        <iframe src="assets/images/resume.pdf" width="600px" height="600px" class="resume">
+        </iframe> <br><br>
+        
+    </div>
+</div>
+</center>
+<footer>erin platvoet ✯ 2020</footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="assets/extras/script.js"></script>
 </body>
 </html>
