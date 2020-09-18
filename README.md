@@ -32,7 +32,7 @@ My GitHub username is *eplatvoet* & my profile can be found [here](https://githu
 I can be reached at erin.didomenico520@gmail.com if you have any other questions about this repository.
 
 ## LINKS
-https://eplatvoet.github.io/erinplatvoet/  
+https://eplatvoet.github.io/portfolio/ 
 
 
 ## SCREENSHOTS
