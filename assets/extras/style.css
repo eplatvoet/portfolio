@@ -1,6 +1,7 @@
 body{
     font-family: 'Slabo 27px', serif;
     background-color: #F5E0AD;
+    font-size: 14px;
 }
 
 .jumbotron{
@@ -14,18 +15,25 @@ body{
     font-size: 30px;
     color: #6FBDFF;
 }
+.subtitles{
+  font-family: 'Abril Fatface', cursive;
+  font-size: 20px;
+  color: #6FBDFF;
+}
 
 .sections{
     background-color: white;
 }
 
-#myImg {
+#poke, #grub {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
   }
   
-  #myImg:hover {opacity: 0.7;}
+  #poke:hover, #grub:hover {
+      opacity: 0.7;
+    }
   
   /* The Modal (background) */
   .modal {
@@ -51,7 +59,7 @@ body{
   }
   
   /* Caption of Modal Image */
-  #caption {
+  #captionOne, #captionTwo {
     margin: auto;
     display: block;
     width: 80%;
@@ -63,7 +71,7 @@ body{
   }
   
   /* Add Animation */
-  .modal-content, #caption {  
+  .modal-content, #caption, #captionTwo {  
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
@@ -107,11 +115,20 @@ footer{
 }
 
   /* 100% Image Width on Smaller Screens */
-  @media only screen and (max-width: 700px){
+  @media only screen and (max-width: 800px){
+    .jumbotron{
+      font-size: 75px;
+    }
+    .bg-cover{
+      width: fit-content;
+    }
+    
     .modal-content {
       width: 100%;
     }
+
     .resume{
         width:100%;
     }
   }
+  /* @media only screen and (max-width: 00px){ */
