@@ -29,30 +29,41 @@
     <!-- container with about me -->
 <div class="container">
     <div class="row sections" id="aboutMe">
-            <h1 class="titles">about me:</h1> <br>
+            <div class="titles">about me:</div> <br>
             Hi! My name is Erin, and I recently changed careers to pursue my web development dreams!<br>
             I just completed the Full-Stack Web Development Coding Bootcamp at Rutgers University.<br>
-            <br> 
+            <br><br>
+           
     </div>
 
     <!-- container with portfolio -->
 <br><br>
     <div class="row sections" id="myPortfolio">
-        <h1 class="titles">some of my work:</h1> <br>
-        <img id="myImg" src="assets/images/LocalGrub.gif" alt="Local Grub: an app that utilizes the Zomato & MapQuest API to gather local restaurant information based off of the user's city choice. This app was created to help promote small business throughout local communities, and give users that chance to explore restaurants besides the big chains/franchises." style="width:100%;max-width:200px"><br>
-
-<!-- The Modal -->
-            <div id="myModal" class="modal">
+        <div class="titles">some of my work:</div> <br>
+        <img id="poke" src="assets/images/PokedexSearch.gif" alt="Pokédex Search: A hint of nostalgia as the user searches for Pokemon characters. Using the Poké API and the Youtube API, the user can access facts about each character as well as the top YouTube video associated with that character" style="width:100%;max-width:250px">
+       <!-- Modal -->
+        <div id="modalOne" class="modal">
             <span class="close">&times;</span>
-            <img class="modal-content" id="img01">
-            <div id="caption"></div>
+            <img class="modal-content" id="pokedex">
+            <div id="captionOne"></div>
             </div>
-        <br>
+
+        <img id="grub" src="assets/images/LocalGrub.gif" alt="Local Grub: An app that utilizes the Zomato & MapQuest API to gather local restaurant information based off of the user's city choice. This app was created to help promote small business throughout local communities, and give users that chance to explore restaurants besides the big chains/franchises." style="width:100%;max-width:250px">
+        <!-- The Modal -->
+            <div id="modalTwo" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="localGrub">
+            <div id="captionTwo"></div>
+            </div>
+        <br><br>
+        <div class="subtitles">technologies:</div><br>
+            HTML ✯ CSS ✯ JavaScript ✯ jQuery ✯ Handlebars ✯ MySQL ✯ Mongo ✯ React.js ✯ API Interaction ✯ Git
+        <br><br>
     </div>
     <!-- container with resume -->
 <br><br>
     <div class="row sections" id="myResume">
-        <h1 class="titles">my resume:</h1> <br>
+        <div class="titles">my resume:</div> <br>
         <iframe src="assets/images/resume.pdf" width="600px" height="600px" class="resume">
         </iframe> <br><br>
         
