@@ -4,6 +4,16 @@ body{
     font-size: 14px;
 }
 
+.navbar{
+  position: fixed;
+  background-color: white;
+  width: 100%;
+}
+
+.right{
+  float:right;
+}
+
 .jumbotron{
     font-family: 'Abril Fatface', cursive;
     font-size: 150px;
