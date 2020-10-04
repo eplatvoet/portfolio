@@ -1,90 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Enter your description here"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-<link rel="stylesheet" href="assets/extras/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Slabo+27px&display=swap" rel="stylesheet">
-<title>erin platvoet</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/extras/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Slabo+27px&display=swap"
+      rel="stylesheet"
+    />
+    <title>erin platvoet</title>
 
-<style>
-    .bg-cover{
-    background-image: url("assets/images/jumbotron.jpg");
-    width:fit-content;
-}
-</style>
-</head>
-<body>
-
+    <style>
+      .bg-cover {
+        background-image: url("assets/images/jumbotron.jpg");
+        width: fit-content;
+      }
+    </style>
+  </head>
+  <body>
     <!-- nav bar that moves with scroll with links to contact -->
     <nav class="navbar">
-        <a class="navbar-brand" href="#aboutMe">about me</a>
-        <a class="navbar-brand" href="#myPortfolio">portfolio</a>
-        <a class="navbar-brand" href="#myResume">resume</a>
-        <a class="navbar-brand right" href="https://github.com/eplatvoet"><img src="https://www.flaticon.com/svg/static/icons/svg/733/733609.svg" height="20px" width="20px"></a>
-        <a class="navbar-brand right" href="https://www.linkedin.com/in/erinplatvoet/"><img src="https://www.flaticon.com/svg/static/icons/svg/1384/1384014.svg" height="20px" width="20px"></a>
-        <a class="navbar-brand right" href="mailto:erin.didomenico520@gmail.com"><img src="https://www.flaticon.com/svg/static/icons/svg/181/181535.svg" height="20px" width="20px"></a>
-      </nav>
-<br><br><br>
-<center>
-    <!-- jumbotron with name -->
-<div class="jumbotron bg-cover">
-   erin platvoet
-</div>
-    <!-- container with about me -->
-<div class="container">
-    <div class="row sections" id="aboutMe">
-            <div class="titles">about me:</div> <br>
-            Hi! My name is Erin, and I recently changed careers to pursue my web development dreams!<br>
-            I just completed the Full-Stack Web Development Coding Bootcamp at Rutgers University.<br>
-            
-            <br><br>
-           
-    </div>
+      <a class="navbar-brand" href="#aboutMe">about me</a>
+      <a class="navbar-brand" href="#myPortfolio">portfolio</a>
+      <a class="navbar-brand" href="#myResume">resume</a>
+      <a class="navbar-brand right" href="https://github.com/eplatvoet"
+        ><img
+          src="https://www.flaticon.com/svg/static/icons/svg/733/733609.svg"
+          height="20px"
+          width="20px"
+      /></a>
+      <a
+        class="navbar-brand right"
+        href="https://www.linkedin.com/in/erinplatvoet/"
+        ><img
+          src="https://www.flaticon.com/svg/static/icons/svg/1384/1384014.svg"
+          height="20px"
+          width="20px"
+      /></a>
+      <a class="navbar-brand right" href="mailto:erin.didomenico520@gmail.com"
+        ><img
+          src="https://www.flaticon.com/svg/static/icons/svg/181/181535.svg"
+          height="20px"
+          width="20px"
+      /></a>
+    </nav>
+    <br /><br /><br />
+    <center>
+      <!-- jumbotron with name -->
+      <div class="jumbotron bg-cover">erin platvoet</div>
+      <!-- container with about me -->
+      <div class="container">
+        <div class="row sections" id="aboutMe">
+          <div class="titles">about me:</div>
+          <br />
+          Hi! My name is Erin, and I recently changed careers to pursue my web
+          development dreams!<br />
+          I just completed the Full-Stack Web Development Coding Bootcamp at
+          Rutgers University.<br />
 
-    <!-- container with portfolio -->
-<br><br>
-    <div class="row sections" id="myPortfolio">
-        <div class="titles">some of my work:</div> <br>
-        <img id="poke" src="assets/images/PokedexSearch.gif" alt="Pokédex Search: A hint of nostalgia as the user searches for Pokemon characters. Using the Poké API and the Youtube API, the user can access facts about each character as well as the top YouTube video associated with that character" style="width:100%;max-width:250px">
-       <!-- Modal -->
-        <div id="modalOne" class="modal">
+          <br /><br />
+        </div>
+
+        <!-- container with portfolio -->
+        <br /><br />
+        <div class="row sections" id="myPortfolio">
+          <div class="titles">some of my work:</div>
+          <br />
+          <!-- project 1 -->
+          <img
+            id="poke"
+            src="assets/images/PokedexSearch.gif"
+            alt="Pokédex Search: A hint of nostalgia as the user searches for Pokemon characters. Using the Poké API and the Youtube API, the user can access facts about each character as well as the top YouTube video associated with that character"
+            style="width: 100%; max-width: 250px"
+          />
+          <!-- Modal -->
+          <div id="modalOne" class="modal">
             <span class="close">&times;</span>
-            <img class="modal-content" id="pokedex">
+            <img class="modal-content" id="pokedex" />
             <div id="captionOne"></div>
-            </div>
-
-        <img id="grub" src="assets/images/LocalGrub.gif" alt="Local Grub: An app that utilizes the Zomato & MapQuest API to gather local restaurant information based off of the user's city choice. This app was created to help promote small business throughout local communities, and give users that chance to explore restaurants besides the big chains/franchises." style="width:100%;max-width:250px">
-        <!-- The Modal -->
-            <div id="modalTwo" class="modal">
+          </div>
+<!-- project 2 -->
+          <img
+            id="grub"
+            src="assets/images/LocalGrub.gif"
+            alt="Local Grub: An app that utilizes the Zomato & MapQuest API to gather local restaurant information based off of the user's city choice. This app was created to help promote small business throughout local communities, and give users that chance to explore restaurants besides the big chains/franchises."
+            style="width: 100%; max-width: 250px"
+          />
+          <!-- The Modal -->
+          <div id="modalTwo" class="modal">
             <span class="close">&times;</span>
-            <img class="modal-content" id="localGrub">
+            <img class="modal-content" id="localGrub" />
             <div id="captionTwo"></div>
-            </div>
-            <br><br>
-        For more examples of some of my work, feel free to check out my <a href="https://github.com/eplatvoet">GitHub</a> profile!
-        <br><br>
-        <div class="subtitles">technologies:</div><br>
-            HTML ✯ CSS ✯ JavaScript ✯ jQuery ✯ Handlebars ✯ MySQL ✯ Mongo ✯ React.js ✯ API Interaction ✯ Git
-        <br><br>
-    </div>
-    <!-- container with resume -->
-<br><br>
-    <div class="row sections" id="myResume">
-        <div class="titles">my resume:</div> <br>
-        <iframe src="assets/images/resume.pdf" width="600px" height="400px" class="resume">
-        </iframe> <br><br>
-        
-    </div>
-</div>
-</center>
-<footer>erin platvoet ✯ 2020</footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="assets/extras/script.js"></script>
-</body>
+          </div>
+<!-- project 3 -->
+          <img
+            id="refresh"
+            src=""
+            alt="Refresh: Using the MERN stack, this task tracking application helps you to protect your largest investment - your home."
+            style="width: 100%; max-width: 250px"
+          />
+          <!-- The Modal -->
+          <div id="modalThree" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="refreshApp" />
+            <div id="captionThree"></div>
+          </div>
+          <br /><br />
+          For more examples of some of my work, feel free to check out my
+          <a href="https://github.com/eplatvoet">GitHub</a> profile!
+          <br /><br />
+          <div class="subtitles">technologies:</div>
+          <br />
+          HTML ✯ CSS ✯ JavaScript ✯ jQuery ✯ Handlebars ✯ MySQL ✯ Mongo ✯
+          React ✯ API Interaction ✯ Git
+          <br /><br />
+        </div>
+        <!-- container with resume -->
+        <br /><br />
+        <div class="row sections" id="myResume">
+          <div class="titles">my resume:</div>
+          <br />
+          <iframe
+            src="assets/images/resume.pdf"
+            width="600px"
+            height="400px"
+            class="resume"
+          >
+          </iframe>
+          <br /><br />
+        </div>
+      </div>
+    </center>
+    <footer>erin platvoet ✯ 2020</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="assets/extras/script.js"></script>
+  </body>
 </html>

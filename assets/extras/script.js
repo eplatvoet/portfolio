@@ -38,3 +38,23 @@ var spanTwo = document.getElementsByClassName("close")[1];
 spanTwo.onclick = function() {
   modalTwo.style.display = "none";
 }
+
+
+// Get the modal
+var modalThree = document.getElementById("modalThree");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var imgThree = document.getElementById("refresh");
+var modalImgThree = document.getElementById("refreshApp");
+var captionTextThree = document.getElementById("captionThree");
+imgThree.onclick = function(){
+  modalThree.style.display = "block";
+  modalImgThree.src = this.src;
+  captionTextThree.innerHTML = this.alt;
+}
+
+var spanThree = document.getElementsByClassName("close")[1];
+
+spanThree.onclick = function() {
+  modalThree.style.display = "none";
+}
