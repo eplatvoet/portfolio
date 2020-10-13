@@ -58,3 +58,19 @@ var spanThree = document.getElementsByClassName("close")[2];
 spanThree.onclick = function() {
   modalThree.style.display = "none";
 }
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var imgFour = document.getElementById("weather");
+var modalImgFour = document.getElementById("weatherDash");
+var captionTextFour = document.getElementById("captionFour");
+imgFour.onclick = function(){
+  modalFour.style.display = "block";
+  modalImgFour.src = this.src;
+  captionTextFour.innerHTML = this.alt;
+}
+
+var spanFour = document.getElementsByClassName("close")[3];
+
+spanFour.onclick = function() {
+  modalFour.style.display = "none";
+}
