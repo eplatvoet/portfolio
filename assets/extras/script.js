@@ -53,7 +53,7 @@ imgThree.onclick = function(){
   captionTextThree.innerHTML = this.alt;
 }
 
-var spanThree = document.getElementsByClassName("close")[1];
+var spanThree = document.getElementsByClassName("close")[2];
 
 spanThree.onclick = function() {
   modalThree.style.display = "none";

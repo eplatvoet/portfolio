@@ -1,4 +1,3 @@
-# portfolio
 # Erin Platvoet: Portfolio
 ## ![Git Hub license](https://img.shields.io/badge/License-Unlicensed-blue.svg)
 
@@ -36,3 +35,4 @@ https://eplatvoet.github.io/portfolio/
 
 
 ## SCREENSHOTS
+*Coming soon!*
