@@ -38,6 +38,7 @@ body{
 #profilePic{
   width: 15%;
   height: 15%;
+  padding: 15px;
 }
 
 #poke, #grub, #refresh, #weather {
