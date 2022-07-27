@@ -58,9 +58,9 @@ body {
 }
 
 #profilePic {
-  width: 15%;
-  height: 15%;
-  padding: 15px;
+  width: 200px;
+  height: auto;
+  /* padding: 15px; */
 }
 
 #poke,
@@ -177,11 +177,28 @@ footer {
   text-align: center;
 }
 
+@media(max-width: 1024px){
+  .jumbotron img{
+    width: 100%;
+  }
+  .jumbotron h1{
+    font-size: 100px !important;
+  }
+}
+@media(max-width: 600px){
+  .jumbotron h1{
+    font-size: 60px !important;
+  }
+  div.sections{
+    padding: 25px !important;
+  }
+  iframe{
+    width: 100%;
+  }
+}
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 800px) {
-  .jumbotron {
-    font-size: 75px;
-  }
+
   .bg-cover {
     width: fit-content;
   }
