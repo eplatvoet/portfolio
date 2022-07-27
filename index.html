@@ -38,13 +38,6 @@
     />
     <link rel="manifest" href="assets/favicon_io/site.webmanifest" />
     <title>erin platvoet</title>
-
-    <style>
-      .bg-cover {
-        background-image: url("assets/images/jumbotron.jpg");
-        width: fit-content;
-      }
-    </style>
   </head>
   <body>
     <!-- nav bar that moves with scroll with links to contact -->
@@ -73,110 +66,114 @@
           width="20px"
       /></a>
     </nav>
-    <br /><br /><br />
-    <center>
-      <!-- jumbotron with name -->
-      <div class="jumbotron bg-cover">erin platvoet</div>
-      <!-- container with about me -->
+    <div class="content-wrapper">
+      <div class="jumbotron bg-cover">
+        <img src="assets/images/jumbotron.jpg" alt="Sandy Hook beach, New Jersey">
+        <h1>
+          erin platvoet
+        </h1>
+      </div>
+
       <div class="container">
         <div class="row sections" id="aboutMe">
-          <div class="titles">about me:</div>
-          <br />
-
-          Hi! My name is Erin, and I recently changed careers to pursue my web
-          development dreams!<br />
+          <h2>about me:</h2>
+          <p>
+            Hi! My name is Erin, and I recently changed careers to pursue my web development dreams!
+          </p>
           <img src="assets/images/profile.JPG" id="profilePic" /><br />
-          I recently completed the Full-Stack Web Development Coding Bootcamp at
-          Rutgers University.<br />
-          I love to travel, and have a goal of hitting all 50 states by the age
-          of 50. I'm currently at 29/50!<br />
-          To me, March Madness is truly the most wonderful time of the year. My
-          teams are UNC & Seton Hall. <br />
-
-          <br /><br />
+          <p>
+            Like many others, 2020 had me re-evaluate some aspects of life, and I decided to start a new chapter of my story. In October 2020, I completed the Full-Stack Web Development Coding Bootcamp at Rutgers University, and was offered my first web development position at Real Chemistry later that month. Almost 2 years later, I still wake up every day thankful that I decided to jump outside of my comfort zone!
+          </p>
+          <h3>
+            a little more about me:
+          </h3>
+          <p>
+            I love to travel, and have a goal of hitting all 50 states by the age of 50. I'm currently at 31/50!
+          </p>
+          <p>
+            To me, March Madness is truly the most wonderful time of the year. My teams are UNC & Seton Hall. 
+          </p>
         </div>
 
-        <!-- container with portfolio -->
-        <br /><br />
         <div class="row sections" id="myPortfolio">
-          <div class="titles">some of my work:</div>
-          <br />
-          <!-- project 1 -->
-          <img
-            id="poke"
-            src="assets/images/PokedexSearch.gif"
-            alt="Pokédex Search: A hint of nostalgia as the user searches for Pokemon characters. Using the Poké API and the Youtube API, the user can access facts about each character as well as the top YouTube video associated with that character"
-            style="width: 100%; max-width: 250px"
-          />
-          <!-- Modal -->
-          <div id="modalOne" class="modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="pokedex" />
-            <div id="captionOne"></div>
+          <h2>some of my work:</h2>
+          <div class="thumb-wrap">
+            <!-- project 1 -->
+            <img
+              id="poke"
+              src="assets/images/PokedexSearch.gif"
+              alt="Pokédex Search: A hint of nostalgia as the user searches for Pokemon characters. Using the Poké API and the Youtube API, the user can access facts about each character as well as the top YouTube video associated with that character"
+              style="width: 100%; max-width: 300px"
+            />
+            <!-- Modal -->
+            <div id="modalOne" class="modal">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="pokedex" />
+              <div id="captionOne"></div>
+            </div>
+            <!-- project 2 -->
+            <img
+              id="grub"
+              src="assets/images/LocalGrub.gif"
+              alt="Local Grub: An app that utilizes the Zomato & MapQuest API to gather local restaurant information based off of the user's city choice. This app was created to help promote small business throughout local communities, and give users that chance to explore restaurants besides the big chains/franchises."
+              style="width: 100%; max-width: 300px"
+            />
+            <!-- The Modal -->
+            <div id="modalTwo" class="modal">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="localGrub" />
+              <div id="captionTwo"></div>
+            </div>
+            <!-- project 3 -->
+            <img
+              id="refresh"
+              src="./assets/images/Refresh.gif"
+              alt="Refresh: Using the MERN stack, this task tracking application helps you to protect your largest investment - your home."
+              style="width: 100%; max-width: 300px"
+            />
+            <!-- The Modal -->
+            <div id="modalThree" class="modal">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="refreshApp" />
+              <div id="captionThree"></div>
+            </div>
+            <!-- assigment 1 -->
+            <img
+              id="weather"
+              src="./assets/images/WeatherDashboard.gif"
+              alt="Weather Dashboard: Check current weather information and get a 5 day forecast with this weather app! Just type in the city of your choice & information pulled from the OpenWeather API will be displayed."
+              style="width: 100%; max-width: 300px"
+            />
+            <!-- The Modal -->
+            <div id="modalFour" class="modal">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="weatherDash" />
+              <div id="captionFour"></div>
+            </div>
           </div>
-          <!-- project 2 -->
-          <img
-            id="grub"
-            src="assets/images/LocalGrub.gif"
-            alt="Local Grub: An app that utilizes the Zomato & MapQuest API to gather local restaurant information based off of the user's city choice. This app was created to help promote small business throughout local communities, and give users that chance to explore restaurants besides the big chains/franchises."
-            style="width: 100%; max-width: 250px"
-          />
-          <!-- The Modal -->
-          <div id="modalTwo" class="modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="localGrub" />
-            <div id="captionTwo"></div>
-          </div>
-          <!-- project 3 -->
-          <img
-            id="refresh"
-            src="./assets/images/Refresh.gif"
-            alt="Refresh: Using the MERN stack, this task tracking application helps you to protect your largest investment - your home."
-            style="width: 100%; max-width: 250px"
-          />
-          <!-- The Modal -->
-          <div id="modalThree" class="modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="refreshApp" />
-            <div id="captionThree"></div>
-          </div>
-          <!-- assigment 1 -->
-          <img
-            id="weather"
-            src="./assets/images/WeatherDashboard.gif"
-            alt="Weather Dashboard: Check current weather information and get a 5 day forecast with this weather app! Just type in the city of your choice & information pulled from the OpenWeather API will be displayed."
-            style="width: 100%; max-width: 250px"
-          />
-          <!-- The Modal -->
-          <div id="modalFour" class="modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="weatherDash" />
-            <div id="captionFour"></div>
-          </div>
-          <br /><br />
-          For more examples of some of my work, feel free to check out my
-          <a href="https://github.com/eplatvoet">GitHub</a> profile!
-          <br /><br />
-          <div class="subtitles">technologies:</div>
-          <br />
-          HTML ✯ CSS/SCSS ✯ JavaScript ✯ jQuery ✯ Git ✯ MySQL ✯ React
-          ✯ API Interaction ✯ PHP ✯ Content Management Systems 
-          <br /><br />
+          <p>
+            For more examples of some of my work, feel free to check out my <a href="https://github.com/eplatvoet">GitHub</a> profile!
+          </p>
+
+          <h3>technologies:</h3>
+          <p>
+            HTML ✯ CSS/SCSS ✯ JavaScript ✯ jQuery ✯ Git ✯ MySQL ✯ React ✯ API Interaction ✯ PHP ✯ Content Management Systems 
+          </p>
         </div>
         <!-- container with resume -->
-        <br /><br />
+
         <div class="row sections" id="myResume">
-          <div class="titles">my resume:</div>
-          <br />
+          <h2>my resume:</h2>
           <iframe
             src="assets/extras/ePlatvoet-resume.pdf#view=FitW&toolbar=0" width="600px" height="400px" class="resume"
           >
           </iframe>
-          <br /><br />
         </div>
       </div>
-    </center>
-    <footer>erin platvoet ✯ 2020</footer>
+    </div>
+
+    <footer>erin platvoet ✯ 2022</footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="assets/extras/script.js"></script>
