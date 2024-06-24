@@ -1,183 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="Portfolio of Erin Platvoet" />
-    <meta name="keywords" content="Erin Platvoet, front-end developer, portfolio">
-    <meta name="author" content="Erin Platvoet">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="assets/extras/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Slabo+27px&display=swap"
-      rel="stylesheet"
-    />
+    <head>
+        <title>erin platvoet</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="description" content="Portfolio of Erin Platvoet" />
+        <meta name="keywords" content="Erin Platvoet, front-end developer, portfolio, email developer, Veeva developer">
+        <meta name="author" content="Erin Platvoet">
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/favicon_io/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/favicon_io/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/favicon_io/favicon-16x16.png"
-    />
-    <link rel="manifest" href="assets/favicon_io/site.webmanifest" />
-    <title>erin platvoet</title>
-  </head>
-  <body>
-    <!-- nav bar that moves with scroll with links to contact -->
-    <nav class="navbar">
-      <a class="navbar-brand" href="#aboutMe">about me</a>
-      <a class="navbar-brand" href="#myPortfolio">portfolio</a>
-      <a class="navbar-brand" href="#myResume">resume</a>
-      <a class="navbar-brand right" href="https://github.com/eplatvoet"
-        ><img
-          src="assets/images/github.png"
-          height="20px"
-          width="20px"
-      /></a>
-      <a
-        class="navbar-brand right"
-        href="https://www.linkedin.com/in/erinplatvoet/"
-        ><img
-          src="assets/images/linkedin.png"
-          height="20px"
-          width="20px"
-      /></a>
-      <a class="navbar-brand right" href="mailto:erin.didomenico520@gmail.com"
-        ><img
-          src="assets/images/gmail.png"
-          height="20px"
-          width="20px"
-      /></a>
-    </nav>
-    <div class="content-wrapper">
-      <div class="jumbotron bg-cover">
-        <img src="assets/images/jumbotron.jpg" alt="Sandy Hook beach, New Jersey">
-        <h1>
-          erin platvoet
-        </h1>
-      </div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+        <link rel="stylesheet" href="assets/extras/style.css" />
 
-      <div class="container">
-        <div class="row sections" id="aboutMe">
-          <h2>about me:</h2>
-          <p>
-            Hi! My name is Erin, and I recently changed careers to pursue my web development dreams!
-          </p>
-          <img src="assets/images/profile.JPG" id="profilePic" /><br />
-          <p>
-            Like many others, 2020 had me re-evaluate some aspects of life, and I decided to start a new chapter of my story. In October 2020, I completed the Full-Stack Web Development Coding Bootcamp at Rutgers University, and was offered my first web development position at Real Chemistry later that month. Almost 2 years later, I still wake up every day thankful that I decided to jump outside of my comfort zone!
-          </p>
-          <h3>
-            a little more about me:
-          </h3>
-          <p>
-            I love to travel, and have a goal of hitting all 50 states by the age of 50. I'm currently at 31/50! I've also added a few stamps to my passport & can't wait to fill that up either!
-          </p>
-          <p>
-            To me, March Madness is truly the most wonderful time of the year. My teams are UNC & Seton Hall. 
-          </p>
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Slabo+27px&display=swap" rel="stylesheet"/>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png"/>
+        <link rel="manifest" href="assets/favicon_io/site.webmanifest" />
+
+    </head>
+    <body>
+        <nav class="flex-wrapper nav-bar">
+            <div class="page-links-wrapper ">
+                <a class="navbar-brand" href="#aboutMe">about me</a>
+                <a class="navbar-brand" href="#myPortfolio">portfolio</a>
+                <a class="navbar-brand" href="#myResume">resume</a>
+            </div>
+            <div class="icon-links-wrapper">
+                <a class="navbar-brand topNav-icon" href="https://github.com/eplatvoet">
+                    <img src="assets/images/github.png"/>
+                </a>
+                <a class="navbar-brand topNav-icon" href="https://www.linkedin.com/in/erinplatvoet/">
+                    <img src="assets/images/linkedin.png"/>
+                </a>
+                <a class="navbar-brand topNav-icon" href="mailto:erin.didomenico520@gmail.com">
+                    <img src="assets/images/gmail.png"/>    
+                </a>
+            </div>
+        </nav>
+        <div class="content-wrapper">
+            <div class="jumbotron bg-cover">
+                <img src="assets/images/jumbotron.jpg" alt="Sandy Hook beach, New Jersey">
+                <h1>
+                    erin platvoet
+                </h1>
+            </div>
+            <div class="sections-container">
+                <div class="row sections" id="aboutMe">
+                    <h2>about me:</h2>
+                    <p>
+                        Hi! My name is Erin, and I changed careers in 2020 to pursue my web development dreams!
+                    </p>
+                    <img src="assets/images/profile.JPG" id="profilePic"/>
+                    <p>
+                        Like many others, 2020 had me re-evaluate some aspects of life, and I decided to start a new chapter of my story. In October 2020, I completed the Full-Stack Web Development Coding Bootcamp at Rutgers University, and was offered my first web development position at Real Chemistry later that month. Almost 4 years later, I still wake up every day thankful that I decided to jump outside of my comfort zone!
+                    </p>
+                    <h3>
+                        a little more about me:
+                    </h3>
+                    <div class="personal-p-wrapper">
+                        <p class="personal-p left-p">
+                            I love to travel, and have a goal of hitting all 50 states by the age of 50. I'm currently at 31/50! I've also added a few stamps to my passport & can't wait to fill that up either! ✈️
+                        </p>
+                        <p class="personal-p right-p">
+                            I know I'm totally biased - but I have been blessed with the best when it comes to pets! 🐾
+                        </p>
+                        <p class="personal-p left-p">
+                            To me, March Madness is truly the most wonderful time of the year. <br class='dsk-only'>My teams are UNC & Seton Hall. 🏀 
+                        </p>
+                        <p class="personal-p right-p">
+                            There is absolutely nothing like being surrounded by fellow fans and singing our hearts out to our favorite lyrics - so I can often be found at a concert, especially during the summer. <em>It was never a phase!</em> 🤘🏼
+                        </p>
+                    </div>
+                </div>
+                <div class="row sections" id="myPortfolio">
+                    <h2>some of my work:</h2>
+                    <div class="thumb-wrap">
+                        <img id="poke" src="assets/images/PokedexSearch.gif" alt="Pokédex Search: A hint of nostalgia as the user searches for Pokemon characters. Using the Poké API and the Youtube API, the user can access facts about each character as well as the top YouTube video associated with that character" class='portfolio-thumbnails'/>
+                        <img id="grub" src="assets/images/LocalGrub.gif" alt="Local Grub: An app that utilizes the Zomato & MapQuest API to gather local restaurant information based off of the user's city choice. This app was created to help promote small business throughout local communities, and give users that chance to explore restaurants besides the big chains/franchises." class='portfolio-thumbnails'/>
+                        <img id="refresh" class='portfolio-thumbnails' src="./assets/images/Refresh.gif" alt="Refresh: Using the MERN stack, this task tracking application helps you to protect your largest investment - your home."/>
+                        <img id="weather" class='portfolio-thumbnails' src="./assets/images/WeatherDashboard.gif" alt="Weather Dashboard: Check current weather information and get a 5 day forecast with this weather app! Just type in the city of your choice & information pulled from the OpenWeather API will be displayed."/>
+                        <img id="black-parade" src="./assets/images/BlackParadeQuiz.png" alt="Welcome to the Black Parade Quiz: Test your memory & see if you remember the lyrics to this emo anthem!" class="portfolio-thumbnails">
+                        <!-- <img id="emo-quizzes" src="./assets/images/emo-quizzes.png" alt="Emo Quizzes: Test your memory on some of the all time classic anthems!" class="portfolio-thumbnails"> -->
+                        <div id="project-modal" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-img" src="">
+                            <div class="modal-caption"></div>
+                        </div>
+                    </div>
+                    <p>
+                        Above are some examples of work completed during bootcamp.<br>
+                        Click on each thumbnail to find out more information.<br>
+                        For more examples of some of my work, feel free to check out my <a href="https://github.com/eplatvoet">GitHub</a> profile!
+                    </p>
+                    <h3>technologies/skills:</h3>
+                    <p class='technologies'>
+                        HTML ✯ CSS/SCSS ✯ JavaScript ✯ jQuery ✯ Git ✯ API Interaction ✯ Laravel ✯ PHP <span class='hidden-star'>✯</span> Content Management Systems ✯ WordPress ✯ GitHub ✯ Adobe Creative Cloud <span class='hidden-star'>✯</span> <span class='veeva-copy'>Veeva Systems (Approved Email & CRM Development)</span>
+                    </p>
+                </div>
+                <div class="row sections" id="myResume">
+                    <h2>my resume:</h2>
+                    <iframe src="assets/extras/ErinPlatvoet-resume.pdf#view=FitW&toolbar=0" width="600" height="400" class="resume">
+                    </iframe>
+                </div>
+            </div>
+
         </div>
 
-        <div class="row sections" id="myPortfolio">
-          <h2>some of my work:</h2>
-          <div class="thumb-wrap">
-            <!-- project 1 -->
-            <img
-              id="poke"
-              src="assets/images/PokedexSearch.gif"
-              alt="Pokédex Search: A hint of nostalgia as the user searches for Pokemon characters. Using the Poké API and the Youtube API, the user can access facts about each character as well as the top YouTube video associated with that character"
-              style="width: 100%; max-width: 300px"
-            />
-            <!-- Modal -->
-            <div id="modalOne" class="modal">
-              <span class="close">&times;</span>
-              <img class="modal-content" id="pokedex" />
-              <div id="captionOne"></div>
-            </div>
-            <!-- project 2 -->
-            <img
-              id="grub"
-              src="assets/images/LocalGrub.gif"
-              alt="Local Grub: An app that utilizes the Zomato & MapQuest API to gather local restaurant information based off of the user's city choice. This app was created to help promote small business throughout local communities, and give users that chance to explore restaurants besides the big chains/franchises."
-              style="width: 100%; max-width: 300px"
-            />
-            <!-- The Modal -->
-            <div id="modalTwo" class="modal">
-              <span class="close">&times;</span>
-              <img class="modal-content" id="localGrub" />
-              <div id="captionTwo"></div>
-            </div>
-            <!-- project 3 -->
-            <img
-              id="refresh"
-              src="./assets/images/Refresh.gif"
-              alt="Refresh: Using the MERN stack, this task tracking application helps you to protect your largest investment - your home."
-              style="width: 100%; max-width: 300px"
-            />
-            <!-- The Modal -->
-            <div id="modalThree" class="modal">
-              <span class="close">&times;</span>
-              <img class="modal-content" id="refreshApp" />
-              <div id="captionThree"></div>
-            </div>
-            <!-- assigment 1 -->
-            <img
-              id="weather"
-              src="./assets/images/WeatherDashboard.gif"
-              alt="Weather Dashboard: Check current weather information and get a 5 day forecast with this weather app! Just type in the city of your choice & information pulled from the OpenWeather API will be displayed."
-              style="width: 100%; max-width: 300px"
-            />
-            <!-- The Modal -->
-            <div id="modalFour" class="modal">
-              <span class="close">&times;</span>
-              <img class="modal-content" id="weatherDash" />
-              <div id="captionFour"></div>
-            </div>
-          </div>
-          <p>
-            Above are some examples of work completed during bootcamp.<br>
-            For more examples of some of my work, feel free to check out my <a href="https://github.com/eplatvoet">GitHub</a> profile!
-          </p>
-          <h3>technologies/skills:</h3>
-          <p class='technologies'>
-            HTML ✯ CSS/SCSS ✯ JavaScript ✯ jQuery ✯ Git ✯ API Interaction ✯ Laravel ✯ PHP <span class='hidden-star'>✯</span> Content Management Systems ✯ WordPress ✯ GitHub ✯ Adobe Creative Cloud <span class='hidden-star'>✯</span> <span style='white-space: nowrap;'>Veeva Systems (Approved Email & CRM Development)</span>
-          </p>
-        </div>
-        <!-- container with resume -->
+        <footer>erin platvoet ✯ 2024</footer>
 
-        <div class="row sections" id="myResume">
-          <h2>my resume:</h2>
-          <iframe
-            src="assets/extras/ePlatvoet-resume.pdf#view=FitW&toolbar=0" width="600px" height="400px" class="resume"
-          >
-          </iframe>
-        </div>
-      </div>
-    </div>
-
-    <footer>erin platvoet ✯ 2022</footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="assets/extras/script.js"></script>
-  </body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="assets/extras/script.js"></script>
+    </body>
 </html>

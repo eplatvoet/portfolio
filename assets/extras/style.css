@@ -4,15 +4,22 @@ body {
   font-size: 14px;
 }
 
-.navbar {
+.nav-bar {
   position: fixed;
   background-color: white;
   width: 100%;
   z-index:10;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-
-.right {
-  float: right;
+.nav-bar .icon-links-wrapper{
+  align-items: flex-end;
+}
+.nav-bar .icon-links-wrapper .topNav-icon img{
+  width: 20px;
+  height: 20px;
+  /* margin: 0 10px; */
 }
 
 .content-wrapper {
@@ -34,24 +41,30 @@ body {
   font-size: 150px;
   color: white;
 }
-.content-wrapper div.container div.sections {
+
+.content-wrapper .sections-container{
+  padding: 0 15px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.content-wrapper div.sections-container div.sections {
   background-color: white;
   padding: 25px 100px;
   max-width: 1024px;
   margin: 15px auto;
   text-align: center;
 }
-.content-wrapper div.container div.sections h2 {
+.content-wrapper div.sections-container div.sections h2 {
   font-family: "Abril Fatface", cursive;
   font-size: 30px;
   color: #6fbdff;
   margin-bottom: 25px;
 }
-.content-wrapper div.container div.sections p {
+.content-wrapper div.sections-container div.sections p {
   margin: 10px auto;
   max-width: 700px;
 }
-.content-wrapper div.container div.sections h3 {
+.content-wrapper div.sections-container div.sections h3 {
   margin: 25px 0 0px;
   font-family: "Abril Fatface", cursive;
   font-size: 20px;
@@ -61,25 +74,40 @@ body {
 #profilePic {
   width: 200px;
   height: auto;
-  /* padding: 15px; */
+  margin: 10px 0;
 }
 
-#poke,
-#grub,
-#refresh,
-#weather {
+.personal-p-wrapper{
+  max-width:600px;
+  margin:0 auto;
+}
+.personal-p{
+  display:block;
+  max-width:415px !important;
+}
+.left-p{
+  float:left;
+}
+.right-p{
+  float:right;
+}
+
+.portfolio-thumbnails {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
+  width: 100%;
+  max-width: 300px;
+  height: 168px;
+  margin: 5px;
 }
-
-#poke:hover,
-#grub:hover,
-#refresh:hover,
-#weather:hover {
+.portfolio-thumbnails:hover {
   opacity: 0.7;
 }
 
+.veeva-copy{
+  white-space: normal;
+}
 iframe{
   margin: 10px 0;
 }
@@ -100,34 +128,27 @@ iframe{
 }
 
 /* Modal Content (image) */
-.modal-content {
+.modal-img {
   margin: auto;
   display: block;
-  width: 80%;
+  width: 100%;
   max-width: 700px;
 }
 
 /* Caption of Modal Image */
-#captionOne,
-#captionTwo,
-#captionThree,
-#captionFour {
+.modal-caption {
   margin: auto;
   display: block;
   width: 80%;
-  max-width: 700px;
+  max-width: 650px;
   text-align: center;
   color: #ccc;
-  padding: 10px 0;
-  height: 150px;
+  font-size: 18px;
+  padding: 30px 0;
 }
 
 /* Add Animation */
-.modal-content,
-#caption,
-#captionTwo,
-#captionThree,
-#captionFour {
+.modal-img, .modal-caption {
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
@@ -155,7 +176,7 @@ iframe{
 /* The Close Button */
 .close {
   position: absolute;
-  top: 15px;
+  top: 60px;
   right: 35px;
   color: #f1f1f1;
   font-size: 40px;
@@ -180,9 +201,8 @@ span.hidden-star{
 footer {
   font-family: "Abril Fatface", cursive;
   font-size: 18px;
-  right: 0;
-  bottom: 0;
   text-align: center;
+  padding:20px 0;
 }
 
 @media(max-width: 1024px){
@@ -192,13 +212,29 @@ footer {
   .jumbotron h1{
     font-size: 100px !important;
   }
+  .content-wrapper .sections-container{
+    padding: 0 25px;
+    margin-left:auto;
+    margin-right:auto;
+  }
 }
+
+@media(max-width: 770px){
+  .content-wrapper {
+    padding-top:20px;
+  }
+}
+
 @media(max-width: 700px){
   .hidden-star{
     display:block;
   }
 }
+
 @media(max-width: 600px){
+  .dsk-only{
+    display:none;
+  }
   .navbar-brand{
     padding: 15px 10px;
   }
@@ -208,17 +244,24 @@ footer {
   div.sections{
     padding: 25px !important;
   }
+  .left-p, .right-p{
+    float:inherit;
+  }
   iframe{
     width: 100%;
   }
   .close{
-    top: 60px;
+    top: 50px;
+  }
+}
+@media only screen and (max-width: 400px){
+  .veeva-copy{
+    white-space:normal;
   }
 }
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 800px) {
-
   .bg-cover {
     width: fit-content;
   }
@@ -231,4 +274,16 @@ footer {
     width: 100%;
   }
 }
-/* @media only screen and (max-width: 00px){ */
+
+@media only screen and (max-width: 370px){
+  .nav-bar .navbar-brand{
+    padding: 15px 5px !important;
+  }
+  .nav-bar .icon-links-wrapper .topNav-icon{
+    padding: 15px 5px 15px 10px !important;
+  }
+  .jumbotron h1{
+    font-size: 50px !important;
+  }
+}
+/* @media only screen and (max-width: 00px){} */
