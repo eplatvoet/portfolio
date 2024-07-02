@@ -177,6 +177,21 @@ iframe{
   }
 }
 
+#project-modal .button-wrapper{
+  display:flex;
+  justify-content: center;
+}
+#project-modal .button-wrapper a{
+  padding: 10px 25px;
+  text-align:center;
+  min-width: 175px;
+  max-width: 175px;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 16px;
+  margin: 0 10px;
+}
+
 /* The Close Button */
 .close {
   position: absolute;
