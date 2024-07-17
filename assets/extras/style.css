@@ -19,7 +19,6 @@ body {
 .nav-bar .icon-links-wrapper .topNav-icon img{
   width: 20px;
   height: 20px;
-  /* margin: 0 10px; */
 }
 
 .content-wrapper {
@@ -91,7 +90,16 @@ body {
 .right-p{
   float:right;
 }
-
+.thumb-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.thumb-wrap h3{
+  width: 100%;
+  text-align:center;
+  padding-bottom:10px;
+}
 .portfolio-thumbnails {
   border-radius: 5px;
   cursor: pointer;
@@ -111,17 +119,23 @@ body {
 .veeva-copy{
   white-space: nowrap;
 }
+.technologies{
+  max-width: 500px !important;
+}
+span.hidden-star{
+  display:none;
+}
 
 iframe{
   margin: 10px 0;
 }
 
-/* The Modal (background) */
+
+/* MODALS */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -129,70 +143,10 @@ iframe{
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
-}
-
-/* Modal Content (image) */
-.modal-img {
-  margin: auto;
-  display: block;
-  width: 100%;
-  max-width: 700px;
-}
-
-/* Caption of Modal Image */
-.modal-caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 650px;
-  text-align: center;
-  color: #ccc;
-  font-size: 18px;
-  padding: 30px 0;
-}
-
-/* Add Animation */
-.modal-img, .modal-caption {
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-  from {
-    -webkit-transform: scale(0);
-  }
-  to {
-    -webkit-transform: scale(1);
-  }
-}
-
-@keyframes zoom {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-#project-modal .button-wrapper{
-  display:flex;
+  align-items: center;
   justify-content: center;
 }
-#project-modal .button-wrapper a{
-  padding: 10px 25px;
-  text-align:center;
-  min-width: 175px;
-  max-width: 175px;
-  background-color: #ffffff;
-  color: #000000;
-  font-size: 16px;
-  margin: 0 10px;
-}
 
-/* The Close Button */
 .close {
   position: absolute;
   top: 60px;
@@ -210,13 +164,99 @@ iframe{
   cursor: pointer;
 }
 
-.technologies{
-  max-width: 500px !important;
+/* PROJECT MODAL */
+#project-modal{
+  flex-direction:column;
 }
-span.hidden-star{
-  display:none;
+.modal-img {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+}
+.modal-caption {
+  display: block;
+  width: 80%;
+  max-width: 650px;
+  text-align: center;
+  color: #ccc;
+  font-size: 18px;
+  padding: 30px 0;
+}
+/* Add Animation */
+.modal-img, .modal-caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+#project-modal .button-wrapper{
+  display:flex;
+  justify-content: center;
+}
+#project-modal .button-wrapper a{
+  padding: 10px 25px;
+  text-align:center;
+  min-width: 175px;
+  max-width: 175px;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 16px;
+  margin: 0 10px;
 }
 
+/* CERTIFICATION MODAL */
+/* #certificates-modal{
+  align-items: center;
+  justify-content: center;
+  padding-top: 0;
+} */
+#carousel{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-item-wrap{
+  max-width: 767px;
+  width: 100%;
+  text-align: center;
+}
+.carousel .carousel-item-wrap .carousel-item{
+  display:none;
+}
+.carousel .carousel-item-wrap .carousel-item.active{
+  display:block;
+}
+.carousel-item img{
+  width:100%;
+}
+.carousel-trigger-wrap{
+  display:flex;
+  justify-content:center;
+}
+.c-trig {
+  color: white;
+  font-size: 20px;
+  margin: 20px;
+}
+
+/* FOOTER */
 footer {
   font-family: "Abril Fatface", cursive;
   font-size: 18px;
@@ -224,6 +264,7 @@ footer {
   padding:20px 0;
 }
 
+/* MEDIA QUERIES */
 @media(max-width: 1024px){
   .jumbotron img{
     width: 100%;
@@ -271,6 +312,15 @@ footer {
   }
   .close{
     top: 50px;
+  }
+  #project-modal .button-wrapper{
+    flex-direction:column;
+  }
+  #project-modal .button-wrapper a{
+    margin: 15px 0;
+  }
+  .carousel-item{
+    padding:0 25px;
   }
 }
 @media only screen and (max-width: 400px){
