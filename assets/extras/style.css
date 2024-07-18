@@ -240,8 +240,16 @@ iframe{
 .carousel .carousel-item-wrap .carousel-item{
   display:none;
 }
+
 .carousel .carousel-item-wrap .carousel-item.active{
-  display:block;
+  display:flex;
+}
+.carousel .carousel-item-wrap .carousel-item.veeva-certz{
+  flex-wrap: wrap;
+  justify-content:center;
+}
+.carousel .carousel-item-wrap .carousel-item.veeva-certz img{
+  max-width:150px;
 }
 .carousel-item img{
   width:100%;
@@ -321,6 +329,9 @@ footer {
   }
   .carousel-item{
     padding:0 25px;
+  }
+  .carousel .carousel-item-wrap .carousel-item.veeva-certz img{
+    max-width:100px;
   }
 }
 @media only screen and (max-width: 400px){
