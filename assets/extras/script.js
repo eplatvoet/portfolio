@@ -8,7 +8,7 @@ $(document).ready(function(){
 
         $('html, body').animate({
             scrollTop: $target.offset().top - 50
-        }, 250, function() {
+        }, 1250, function() {
             // Temporarily store the current scroll position
             var scrollTop = $target.offset().top - 50;
 
@@ -20,6 +20,54 @@ $(document).ready(function(){
         });
     });
     
+    // Intersection Observer API to handle blur effect
+    if(window.innerWidth > 767){
+
+        var sections = document.querySelectorAll('.sections');
+        var observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.25 // Adjust this value as needed
+        };
+    
+        var observer = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('section-blurred');
+                } else {
+                    entry.target.classList.add('section-blurred');
+                }
+            });
+        }, observerOptions);
+    
+        sections.forEach(function(section) {
+            section.classList.add('section-blurred'); // Add blur effect initially
+            observer.observe(section); // Observe each section
+        });
+    } else{
+        var sections = document.querySelectorAll('.sections');
+        var observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1 // Adjust this value as needed
+        };
+    
+        var observer = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('section-blurred');
+                } else {
+                    entry.target.classList.add('section-blurred');
+                }
+            });
+        }, observerOptions);
+    
+        sections.forEach(function(section) {
+            section.classList.add('section-blurred'); // Add blur effect initially
+            observer.observe(section); // Observe each section
+        });
+    }
+
 
     // PORTFOLIO MODAL FUNCTIONALITY
     $('.portfolio-thumbnails').click(function(){
