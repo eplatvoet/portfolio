@@ -70,26 +70,68 @@ $(document).ready(function(){
 
 
     // PORTFOLIO MODAL FUNCTIONALITY
-    $('.portfolio-thumbnails').click(function(){
-        var imgSrc = $(this).attr('src');
-        $('.modal-img').attr('src', imgSrc);
+    // $('.portfolio-thumbnails').click(function(){
+    //     var imgSrc = $(this).attr('src');
+    //     $('.modal-img').attr('src', imgSrc);
         
-        var imgAlt = $(this).attr('alt');
-        $('.modal-caption').html(imgAlt);
+    //     var imgAlt = $(this).attr('alt');
+    //     $('.modal-caption').html(imgAlt);
 
-        var repoLink = $(this).attr('data-repo');
+    //     var repoLink = $(this).attr('data-repo');
+    //     $('#repo-link').attr('href', repoLink);
+
+    //     var deployedLink = $(this).attr('data-deployed');
+    //     console.log(deployedLink)
+    //     if(deployedLink === ""){
+    //         $('#dep-link').css('display', "none");
+    //     } else{
+    //         $('#dep-link').css('display', "block");
+    //         $('#dep-link').attr('href', deployedLink);
+    //     }
+
+    //     $('#project-modal').css('display', 'flex');
+    // });
+    var currentIndex;
+
+    function updateModalContent(index) {
+        var img = $('.portfolio-thumbnails[data-number="' + index + '"]');
+        var imgSrc = img.attr('src');
+        var imgAlt = img.attr('alt');
+        var repoLink = img.attr('data-repo');
+        var deployedLink = img.attr('data-deployed');
+
+        $('.modal-img').attr('src', imgSrc);
+        $('.modal-caption').html(imgAlt);
         $('#repo-link').attr('href', repoLink);
 
-        var deployedLink = $(this).attr('data-deployed');
-        console.log(deployedLink)
-        if(deployedLink === ""){
+        if (deployedLink === "") {
             $('#dep-link').css('display', "none");
-        } else{
+        } else {
             $('#dep-link').css('display', "block");
             $('#dep-link').attr('href', deployedLink);
         }
+    }
 
+    $('.portfolio-thumbnails').click(function () {
+        currentIndex = $(this).attr('data-number');
+        updateModalContent(currentIndex);
         $('#project-modal').css('display', 'flex');
+    });
+
+    $('.left-trigger').click(function () {
+        currentIndex--;
+        if (currentIndex < 1) {
+            currentIndex = $('.portfolio-thumbnails').length;
+        }
+        updateModalContent(currentIndex);
+    });
+
+    $('.right-trigger').click(function () {
+        currentIndex++;
+        if (currentIndex > $('.portfolio-thumbnails').length) {
+            currentIndex = 1;
+        }
+        updateModalContent(currentIndex);
     });
 
     // CLOSE MODAL FUNCTIONALITY

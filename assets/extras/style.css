@@ -163,10 +163,12 @@ iframe{
   position: absolute;
   top: 60px;
   right: 35px;
-  color: #f1f1f1;
+  color: #ffffff;
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
+  text-shadow: none;
+  opacity: 1;
 }
 
 .close:hover,
@@ -193,6 +195,7 @@ iframe{
   color: #ccc;
   font-size: 18px;
   padding: 30px 0;
+  margin: 0 auto;
 }
 /* Add Animation */
 .modal-img, .modal-caption {
@@ -217,11 +220,15 @@ iframe{
     transform: scale(1);
   }
 }
-#project-modal .button-wrapper{
+#project-modal .project-modal-content{
+  max-width: 650px;
+  position: relative;
+}
+#project-modal .project-modal-content .button-wrapper{
   display:flex;
   justify-content: center;
 }
-#project-modal .button-wrapper a{
+#project-modal .project-modal-content .button-wrapper a{
   padding: 10px 25px;
   text-align:center;
   min-width: 175px;
@@ -230,6 +237,12 @@ iframe{
   color: #000000;
   font-size: 16px;
   margin: 0 10px;
+}
+#project-modal .project-modal-content .project-trigger-wrap{
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  width: 100%;
 }
 
 /* CERTIFICATION MODAL */
