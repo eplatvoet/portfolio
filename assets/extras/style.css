@@ -322,6 +322,8 @@ footer {
   }
   .close{
     top: 50px;
+    font-size: 100px;
+    color: white;
   }
   #project-modal .button-wrapper{
     flex-direction:column;
@@ -336,24 +338,18 @@ footer {
     max-width:100px;
   }
 }
-@media only screen and (max-width: 400px){
-  .veeva-copy{
-    white-space:normal;
-  }
-}
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 800px) {
   .modal-content {
     width: 100%;
   }
-
   .resume {
     width: 100%;
   }
 }
 
-@media only screen and (max-width: 370px){
+@media only screen and (max-width: 395px){
   .nav-bar .navbar-brand{
     padding: 15px 5px !important;
   }

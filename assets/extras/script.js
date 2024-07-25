@@ -8,7 +8,7 @@ $(document).ready(function(){
 
         $('html, body').animate({
             scrollTop: $target.offset().top - 50
-        }, 100, function() {
+        }, 250, function() {
             // Temporarily store the current scroll position
             var scrollTop = $target.offset().top - 50;
 
