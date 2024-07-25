@@ -1,4 +1,26 @@
 $(document).ready(function(){
+    
+    $('nav a[data-section-id]').on('click', function(event) {
+        event.preventDefault();
+
+        var sectionId = $(this).data('section-id');
+        var $target = $('#' + sectionId);
+
+        $('html, body').animate({
+            scrollTop: $target.offset().top - 50
+        }, 100, function() {
+            // Temporarily store the current scroll position
+            var scrollTop = $target.offset().top - 50;
+
+            // Update the hash in the URL without affecting the scroll position
+            window.location.hash = sectionId;
+
+            // Restore the scroll position to prevent jump
+            $(window).scrollTop(scrollTop);
+        });
+    });
+    
+
     // PORTFOLIO MODAL FUNCTIONALITY
     $('.portfolio-thumbnails').click(function(){
         var imgSrc = $(this).attr('src');
@@ -22,6 +44,7 @@ $(document).ready(function(){
         $('#project-modal').css('display', 'flex');
     });
 
+    // CLOSE MODAL FUNCTIONALITY
     $('.close').click(function(){
         if($('#project-modal').css('display') === "flex"){
             $('#project-modal').css('display', 'none');
@@ -30,7 +53,6 @@ $(document).ready(function(){
             $('#certificates-modal').css('display', 'none');
         }
     });
-
     $(window).click(function(event){
         if ($(event.target).is('#project-modal')) {
             $('#project-modal').css('display', 'none');

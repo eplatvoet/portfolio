@@ -1,3 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.sections:target:before {
+  content: "";
+  display: block;
+  height: 150px;
+  margin: -150px 0 0;
+}
 body {
   /* font-family: "Slabo 27px", serif; */
   font-family: "Raleway", sans-serif;
@@ -5,7 +15,6 @@ body {
   background-color: #000000;
   font-size: 14px;
 }
-
 .nav-bar {
   position: fixed;
   background-color: #ffffff;
@@ -291,6 +300,7 @@ footer {
   font-size: 18px;
   text-align: center;
   padding:20px 0;
+  color: #ffffff;
 }
 
 /* MEDIA QUERIES */
