@@ -227,6 +227,7 @@ iframe{
 #project-modal .project-modal-content .button-wrapper{
   display:flex;
   justify-content: center;
+  align-items: center;
 }
 #project-modal .project-modal-content .button-wrapper a{
   padding: 10px 25px;
@@ -241,7 +242,7 @@ iframe{
 #project-modal .project-modal-content .project-trigger-wrap{
   display: flex;
   position: absolute;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
 }
 
@@ -253,7 +254,7 @@ iframe{
   justify-content: center;
 }
 .carousel-item-wrap{
-  max-width: 767px;
+  max-width: 650px;
   width: 100%;
   text-align: center;
 }
