@@ -1,17 +1,28 @@
 body {
-  font-family: "Slabo 27px", serif;
-  background-color: #f5e0ad;
+  /* font-family: "Slabo 27px", serif; */
+  font-family: "Raleway", sans-serif;
+  /* background-color: #f5e0ad; */
+  background-color: #000000;
   font-size: 14px;
 }
 
 .nav-bar {
   position: fixed;
-  background-color: white;
+  background-color: #ffffff;
   width: 100%;
   z-index:10;
   display:flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.nav-bar .page-links-wrapper a{
+  color: #333333;
+  /* font-weight: 800; */
+  cursor: pointer;
+}
+.nav-bar .page-links-wrapper a:hover{
+  font-weight: 800;
+  color: red;
 }
 .nav-bar .icon-links-wrapper{
   align-items: flex-end;
@@ -27,19 +38,22 @@ body {
 .content-wrapper .jumbotron {
   background-color: transparent;
   position: relative;
-  width: fit-content;
-  height: fit-content;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
 }
-.content-wrapper .jumbotron h1 {
+.content-wrapper .jumbotron img{
+  width: 100%;
+}
+/* .content-wrapper .jumbotron h1 {
   position: absolute;
   font-family: "Abril Fatface", cursive;
   font-size: 150px;
   color: white;
-}
+} */
 
 .content-wrapper .sections-container{
   padding: 0 15px;
@@ -47,17 +61,21 @@ body {
   margin-right:auto;
 }
 .content-wrapper div.sections-container div.sections {
-  background-color: white;
+  /* background-color: white; */
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 25px 100px;
   max-width: 1024px;
-  margin: 15px auto;
+  margin: 25px auto;
   text-align: center;
 }
 .content-wrapper div.sections-container div.sections h2 {
-  font-family: "Abril Fatface", cursive;
+  /* font-family: "Abril Fatface", cursive; */
+  font-family: "Archivo Black", sans-serif;
   font-size: 30px;
-  color: #6fbdff;
+  /* color: #6fbdff; */
+  color: #333333;
   margin-bottom: 25px;
+  text-transform: uppercase;
 }
 .content-wrapper div.sections-container div.sections p {
   margin: 10px auto;
@@ -65,9 +83,12 @@ body {
 }
 .content-wrapper div.sections-container div.sections h3 {
   margin: 25px 0 0px;
-  font-family: "Abril Fatface", cursive;
+  /* font-family: "Abril Fatface", cursive; */
+  font-family: "Archivo Black", sans-serif;
   font-size: 20px;
-  color: #6fbdff;
+  /* color: #6fbdff; */
+  color: #333333;
+  text-transform: uppercase;
 }
 
 #profilePic {
@@ -104,9 +125,8 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
-  width: 100%;
-  max-width: 300px;
-  height: 168px;
+  width: 215px;
+  height: 129px;
   margin: 5px;
 }
 .portfolio-thumbnails:hover {
@@ -120,7 +140,7 @@ body {
   white-space: nowrap;
 }
 .technologies{
-  max-width: 500px !important;
+  max-width: 470px !important;
 }
 span.hidden-star{
   display:none;
@@ -266,7 +286,8 @@ iframe{
 
 /* FOOTER */
 footer {
-  font-family: "Abril Fatface", cursive;
+  /* font-family: "Abril Fatface", cursive; */
+  font-family: "Archivo Black", sans-serif;
   font-size: 18px;
   text-align: center;
   padding:20px 0;
@@ -275,11 +296,11 @@ footer {
 /* MEDIA QUERIES */
 @media(max-width: 1024px){
   .jumbotron img{
-    width: 100%;
+    /* width: 100%; */
   }
-  .jumbotron h1{
+  /* .jumbotron h1{
     font-size: 100px !important;
-  }
+  } */
   .content-wrapper .sections-container{
     padding: 0 25px;
     margin-left:auto;
@@ -297,12 +318,13 @@ footer {
   span.hidden-star{
     display:inline-block !important;
   }
-}
-
-@media (max-width: 600px){
   .dsk-only{
     display:none;
   }
+}
+
+@media (max-width: 600px){
+
   .navbar-brand{
     padding: 15px 10px;
   }
@@ -314,6 +336,10 @@ footer {
   }
   .left-p, .right-p{
     float:inherit;
+  }
+  .portfolio-thumbnails{
+    width: 100%;
+    height:auto;
   }
   iframe{
     width: 100%;
@@ -342,9 +368,9 @@ footer {
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 800px) {
-  .bg-cover {
+  /* .bg-cover {
     width: fit-content;
-  }
+  } */
 
   .modal-content {
     width: 100%;
@@ -362,8 +388,8 @@ footer {
   .nav-bar .icon-links-wrapper .topNav-icon{
     padding: 15px 5px 15px 10px !important;
   }
-  .jumbotron h1{
+  /* .jumbotron h1{
     font-size: 50px !important;
-  }
+  } */
 }
 /* @media only screen and (max-width: 00px){} */
