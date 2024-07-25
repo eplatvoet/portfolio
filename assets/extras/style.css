@@ -1,20 +1,9 @@
-html {
-  scroll-behavior: smooth;
-}
-
-.sections:target:before {
-  content: "";
-  display: block;
-  height: 150px;
-  margin: -150px 0 0;
-}
 body {
-  /* font-family: "Slabo 27px", serif; */
   font-family: "Raleway", sans-serif;
-  /* background-color: #f5e0ad; */
   background-color: #000000;
   font-size: 14px;
 }
+
 .nav-bar {
   position: fixed;
   background-color: #ffffff;
@@ -26,7 +15,6 @@ body {
 }
 .nav-bar .page-links-wrapper a{
   color: #333333;
-  /* font-weight: 800; */
   cursor: pointer;
 }
 .nav-bar .page-links-wrapper a:hover{
@@ -44,7 +32,8 @@ body {
 .content-wrapper {
   margin: 0 auto;
 }
-.content-wrapper .jumbotron {
+
+.jumbotron {
   background-color: transparent;
   position: relative;
   width: 100vw;
@@ -54,34 +43,25 @@ body {
   justify-content: center;
   margin: 0 auto;
 }
-.content-wrapper .jumbotron img{
+.jumbotron img{
   width: 100%;
 }
-/* .content-wrapper .jumbotron h1 {
-  position: absolute;
-  font-family: "Abril Fatface", cursive;
-  font-size: 150px;
-  color: white;
-} */
 
-.content-wrapper .sections-container{
+.sections-container{
   padding: 0 15px;
   margin-left:auto;
   margin-right:auto;
 }
-.content-wrapper div.sections-container div.sections {
-  /* background-color: white; */
+.sections-container div.sections {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 25px 100px;
   max-width: 1024px;
   margin: 25px auto;
   text-align: center;
 }
-.content-wrapper div.sections-container div.sections h2 {
-  /* font-family: "Abril Fatface", cursive; */
+.sections-container div.sections h2 {
   font-family: "Archivo Black", sans-serif;
   font-size: 30px;
-  /* color: #6fbdff; */
   color: #333333;
   margin-bottom: 25px;
   text-transform: uppercase;
@@ -92,12 +72,13 @@ body {
 }
 .content-wrapper div.sections-container div.sections h3 {
   margin: 25px 0 0px;
-  /* font-family: "Abril Fatface", cursive; */
   font-family: "Archivo Black", sans-serif;
   font-size: 20px;
-  /* color: #6fbdff; */
   color: #333333;
   text-transform: uppercase;
+}
+.no-wrap{
+  white-space: nowrap;
 }
 
 #profilePic {
@@ -120,6 +101,7 @@ body {
 .right-p{
   float:right;
 }
+
 .thumb-wrap{
   display: flex;
   flex-wrap: wrap;
@@ -141,24 +123,13 @@ body {
 .portfolio-thumbnails:hover {
   opacity: 0.7;
 }
-
-.no-wrap{
-  white-space: nowrap;
-}
-.veeva-copy{
-  white-space: nowrap;
-}
 .technologies{
   max-width: 470px !important;
-}
-span.hidden-star{
-  display:none;
 }
 
 iframe{
   margin: 10px 0;
 }
-
 
 /* MODALS */
 .modal {
@@ -250,11 +221,6 @@ iframe{
 }
 
 /* CERTIFICATION MODAL */
-/* #certificates-modal{
-  align-items: center;
-  justify-content: center;
-  padding-top: 0;
-} */
 #carousel{
   display: flex;
   flex-direction: column;
@@ -269,7 +235,6 @@ iframe{
 .carousel .carousel-item-wrap .carousel-item{
   display:none;
 }
-
 .carousel .carousel-item-wrap .carousel-item.active{
   display:flex;
 }
@@ -295,7 +260,6 @@ iframe{
 
 /* FOOTER */
 footer {
-  /* font-family: "Abril Fatface", cursive; */
   font-family: "Archivo Black", sans-serif;
   font-size: 18px;
   text-align: center;
@@ -305,12 +269,6 @@ footer {
 
 /* MEDIA QUERIES */
 @media(max-width: 1024px){
-  .jumbotron img{
-    /* width: 100%; */
-  }
-  /* .jumbotron h1{
-    font-size: 100px !important;
-  } */
   .content-wrapper .sections-container{
     padding: 0 25px;
     margin-left:auto;
@@ -334,7 +292,6 @@ footer {
 }
 
 @media (max-width: 600px){
-
   .navbar-brand{
     padding: 15px 10px;
   }
@@ -378,10 +335,6 @@ footer {
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 800px) {
-  /* .bg-cover {
-    width: fit-content;
-  } */
-
   .modal-content {
     width: 100%;
   }
@@ -398,8 +351,5 @@ footer {
   .nav-bar .icon-links-wrapper .topNav-icon{
     padding: 15px 5px 15px 10px !important;
   }
-  /* .jumbotron h1{
-    font-size: 50px !important;
-  } */
 }
 /* @media only screen and (max-width: 00px){} */
