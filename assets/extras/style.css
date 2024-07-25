@@ -126,6 +126,15 @@ body {
 .technologies{
   max-width: 470px !important;
 }
+#myPortfolio a{
+  cursor: pointer;
+  color: #000000;
+  text-decoration: underline;
+}
+#myPortfolio a:hover{
+  font-weight: bold;
+  color: red;
+}
 
 iframe{
   margin: 10px 0;
