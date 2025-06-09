@@ -95,6 +95,7 @@ body {
 .personal-p-wrapper{
   max-width:600px;
   margin:0 auto;
+  text-align: left;
 }
 .personal-p{
   display:block;
@@ -102,9 +103,11 @@ body {
 }
 .left-p{
   float:left;
+  text-align:center;
 }
 .right-p{
   float:right;
+  text-align:center;
 }
 
 .thumb-wrap{
