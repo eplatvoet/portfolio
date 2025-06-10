@@ -19,7 +19,37 @@ $(document).ready(function(){
             $(window).scrollTop(scrollTop);
         });
     });
-    
+
+    // add functionality that depending on what section is active, the nav bar will be highlighted
+    let scrollTimeout;
+    $(window).scroll(function(){
+        if (scrollTimeout) {
+            window.cancelAnimationFrame(scrollTimeout);
+        }
+        
+        scrollTimeout = window.requestAnimationFrame(function() {
+            var scrollPosition = $(window).scrollTop() + 100; // Add offset for nav height
+            var sections = $('.sections');
+            var currentSection = null;
+            
+            sections.each(function(){
+                var sectionTop = $(this).offset().top;
+                var sectionBottom = sectionTop + $(this).outerHeight();
+                
+                if(scrollPosition >= sectionTop && scrollPosition < sectionBottom){
+                    currentSection = $(this).attr('id');
+                }
+            });
+            
+            // Remove active class from all nav items first
+            $('nav a[data-section-id]').removeClass('active-nav');
+            
+            // Add active class to current section's nav item
+            if(currentSection) {
+                $('nav a[data-section-id="' + currentSection + '"]').addClass('active-nav');
+            }
+        });
+    });
     // Intersection Observer API to handle blur effect
     if(window.innerWidth > 767){
 
@@ -68,29 +98,6 @@ $(document).ready(function(){
         });
     }
 
-
-    // PORTFOLIO MODAL FUNCTIONALITY
-    // $('.portfolio-thumbnails').click(function(){
-    //     var imgSrc = $(this).attr('src');
-    //     $('.modal-img').attr('src', imgSrc);
-        
-    //     var imgAlt = $(this).attr('alt');
-    //     $('.modal-caption').html(imgAlt);
-
-    //     var repoLink = $(this).attr('data-repo');
-    //     $('#repo-link').attr('href', repoLink);
-
-    //     var deployedLink = $(this).attr('data-deployed');
-    //     console.log(deployedLink)
-    //     if(deployedLink === ""){
-    //         $('#dep-link').css('display', "none");
-    //     } else{
-    //         $('#dep-link').css('display', "block");
-    //         $('#dep-link').attr('href', deployedLink);
-    //     }
-
-    //     $('#project-modal').css('display', 'flex');
-    // });
     var currentIndex;
 
     function updateModalContent(index) {
