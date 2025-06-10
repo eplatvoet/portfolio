@@ -22,7 +22,12 @@ body {
 }
 .nav-bar .page-links-wrapper a:hover{
   font-weight: 800;
-  color: red;
+  color: #000000;
+  /* text-shadow: 1px 1px 2px red; */
+}
+.nav-bar .page-links-wrapper a.active-nav{
+  color:red;
+  font-weight: 800;
 }
 .nav-bar .icon-links-wrapper{
   align-items: flex-end;
@@ -109,7 +114,13 @@ body {
   float:right;
   text-align:center;
 }
-
+.personal-p-wrapper ul{
+  margin: 10px 0 0;
+  padding: 0 0 0 12px;
+}
+.personal-p-wrapper ul li {
+  margin: 0 0 5px;  
+}
 .thumb-wrap{
   display: flex;
   flex-wrap: wrap;
@@ -299,6 +310,10 @@ footer {
   color: #ffffff;
 }
 
+.mob-only{
+  display:none;
+}
+
 /* MEDIA QUERIES */
 @media(max-width: 1024px){
   .content-wrapper .sections-container{
@@ -321,6 +336,9 @@ footer {
   .dsk-only{
     display:none;
   }
+  .mob-only{
+    display:block;
+  }
 }
 
 @media (max-width: 600px){
@@ -333,9 +351,9 @@ footer {
   div.sections{
     padding: 25px !important;
   }
-  .left-p, .right-p{
-    float:inherit;
-  }
+  /* .left-p, .right-p{
+    float:inherit !important;
+  } */
   .portfolio-thumbnails{
     width: 100%;
     height:auto;
@@ -344,18 +362,18 @@ footer {
     width: 100%;
   }
   .close{
-    top: 50px;
-    font-size: 100px;
+    top: 45px;
+    font-size: 60px;
     color: white;
   }
   #project-modal .button-wrapper{
-    flex-direction:column;
+    flex-direction:column !important;
   }
   #project-modal .button-wrapper a{
-    margin: 15px 0;
+    margin: 0px 0px 10px !important;
   }
   .carousel-item{
-    padding:0 25px;
+    padding:0 25px !important;
   }
   .carousel .carousel-item-wrap .carousel-item.veeva-certz img{
     max-width:100px;
@@ -365,10 +383,10 @@ footer {
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 800px) {
   .modal-content {
-    width: 100%;
+    width: 100% !important;
   }
   .resume {
-    width: 100%;
+    width: 100% !important;
   }
 }
 
