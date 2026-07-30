@@ -7,7 +7,7 @@ $(document).ready(function(){
         var $target = $('#' + sectionId);
 
         $('html, body').animate({
-            scrollTop: $target.offset().top - 50
+            scrollTop: $target.offset().top - 25
         }, 1250, function() {
             // Temporarily store the current scroll position
             var scrollTop = $target.offset().top - 50;
@@ -28,7 +28,7 @@ $(document).ready(function(){
         }
         
         scrollTimeout = window.requestAnimationFrame(function() {
-            var scrollPosition = $(window).scrollTop() + 100; // Add offset for nav height
+            var scrollPosition = $(window).scrollTop() + 50; // Add offset for nav height
             var sections = $('.sections');
             var currentSection = null;
             
