@@ -50,53 +50,27 @@ $(document).ready(function(){
             }
         });
     });
-    // Intersection Observer API to handle blur effect
-    if(window.innerWidth > 767){
+    // Reveal sections as they scroll into view with alternating left/right motion
+    var sections = document.querySelectorAll('.sections');
+    var revealObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+            } else {
+                entry.target.classList.remove('is-visible');
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.2
+    });
 
-        var sections = document.querySelectorAll('.sections');
-        var observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.25 // Adjust this value as needed
-        };
-    
-        var observer = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.remove('section-blurred');
-                } else {
-                    entry.target.classList.add('section-blurred');
-                }
-            });
-        }, observerOptions);
-    
-        sections.forEach(function(section) {
-            section.classList.add('section-blurred'); // Add blur effect initially
-            observer.observe(section); // Observe each section
-        });
-    } else{
-        var sections = document.querySelectorAll('.sections');
-        var observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1 // Adjust this value as needed
-        };
-    
-        var observer = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.remove('section-blurred');
-                } else {
-                    entry.target.classList.add('section-blurred');
-                }
-            });
-        }, observerOptions);
-    
-        sections.forEach(function(section) {
-            section.classList.add('section-blurred'); // Add blur effect initially
-            observer.observe(section); // Observe each section
-        });
-    }
+    sections.forEach(function(section, index) {
+        section.classList.add('section-reveal');
+        section.setAttribute('data-reveal-direction', index % 2 === 0 ? 'left' : 'right');
+        revealObserver.observe(section);
+    });
 
     var currentIndex;
 
