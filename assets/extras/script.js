@@ -134,35 +134,62 @@ $(document).ready(function(){
     });
 
     // CERTIFICATES MODAL FUNCTIONALITY
-    $('.certificates-modal-trigger').click(function(){
-        $('#certificates-modal').css('display', 'flex')
-        function updateCarousel(direction) {
-            var $activeItem = $('.carousel-item.active');
-            var $newActiveItem;
+    var certIndex = 0;
+    var certsLoaded = false;
 
-            if (direction === 'left') {
-                $newActiveItem = $activeItem.prev('.carousel-item');
-                if ($newActiveItem.length === 0) {
-                    $newActiveItem = $('.carousel-item').last();
-                }
-            } else {
-                $newActiveItem = $activeItem.next('.carousel-item');
-                if ($newActiveItem.length === 0) {
-                    $newActiveItem = $('.carousel-item').first();
-                }
-            }
+    async function loadCertificates() {
+        if (certsLoaded) return;
 
-            $activeItem.removeClass('active');
-            $newActiveItem.addClass('active');
+        var wrap = document.querySelector('#certificates-modal .carousel-item-wrap');
+
+        try {
+            var res = await fetch('./assets/data/certificates.json');
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            var slides = await res.json();
+
+            wrap.innerHTML = '';
+            slides.forEach(function(slide, i) {
+                var item = document.createElement('div');
+                item.className = 'carousel-item';
+                if (slide.className) item.classList.add(slide.className);
+                if (i === 0) item.classList.add('active');
+
+                slide.images.forEach(function(image) {
+                    var img = document.createElement('img');
+                    img.src = image.src;
+                    img.alt = image.alt;
+                    if (image.fullWidth) img.className = 'w-100';
+                    item.appendChild(img);
+                });
+
+                wrap.appendChild(item);
+            });
+
+            certIndex = 0;
+            certsLoaded = true;
+        } catch (err) {
+            console.error('Could not load certificates:', err);
         }
+    }
 
-        $('.c-trig.left-trigger').click(function() {
-            updateCarousel('left');
-        });
+    function showCertificate(index) {
+        var $items = $('#certificates-modal .carousel-item');
+        if (!$items.length) return;
 
-        $('.c-trig.right-trigger').click(function() {
-            updateCarousel('right');
-        });
-        
-    })
+        certIndex = (index + $items.length) % $items.length; // wraps both directions
+        $items.removeClass('active').eq(certIndex).addClass('active');
+    }
+
+    $('.certificates-modal-trigger').click(async function(){
+        await loadCertificates();
+        $('#certificates-modal').css('display', 'flex');
+    });
+
+    $('#certificates-modal .left-trigger').click(function () {
+        showCertificate(certIndex - 1);
+    });
+
+    $('#certificates-modal .right-trigger').click(function () {
+        showCertificate(certIndex + 1);
+    });
 });

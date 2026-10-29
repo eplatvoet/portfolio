@@ -1,0 +1,36 @@
+[
+  {
+    "images": [
+      { "src": "./assets/images/cert-bootcamp.png", "alt": "Rutger's Coding Bootcamp Certification", "fullWidth": true }
+    ]
+  },
+  {
+    "className": "veeva-certz",
+    "images": [
+      { "src": "./assets/images/cert-veeva-1.png", "alt": "Content Partner: Individual Vault Promomats Review and Approval Certification" },
+      { "src": "./assets/images/cert-veeva-2.png", "alt": "Content Partner: Individual Business Approved Email Certification" },
+      { "src": "./assets/images/cert-veeva-3.png", "alt": "Content Partner: Individual Technical Approved Email Certification" },
+      { "src": "./assets/images/cert-veeva-4.png", "alt": "Content Partner: Individual Business CLM Certification" },
+      { "src": "./assets/images/cert-veeva-5.png", "alt": "Content Partner: Individual Technical CLM Certification" },
+      { "src": "./assets/images/cert-veeva-6.png", "alt": "Content Partner: Individual Business Engage for Portals Certification" },
+      { "src": "./assets/images/cert-veeva-7.png", "alt": "Content Partner: Individual Technical Engage for Portals Certification" },
+      { "src": "./assets/images/cert-veeva-8.png", "alt": "Content Partner: Individual Business Engage Meeting Certification" },
+      { "src": "./assets/images/cert-veeva-9.png", "alt": "Content Partner: Individual Technical Engage Meeting Certification" }
+    ]
+  },
+  {
+    "images": [
+      { "src": "./assets/images/cert-fcc-rwd.png", "alt": "freeCodeCamp Responsive Web Certification Certificate", "fullWidth": true }
+    ]
+  },
+  {
+    "images": [
+      { "src": "./assets/images/cert-hubspot-email-mktng.png", "alt": "HubSpot Academy: Email Marketing Certificate", "fullWidth": true }
+    ]
+  },
+  {
+    "images": [
+      { "src": "./assets/images/cert-hubspot-salesforce-int.png", "alt": "HubSpot Academy: Salesforce Integration Certificate", "fullWidth": true }
+    ]
+  }
+]
