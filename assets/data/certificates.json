@@ -30,6 +30,11 @@
   },
   {
     "images": [
+      { "src": "./assets/images/cert-hubspot-email-mktng-software.png", "alt": "HubSpot Academy: Email Marketing Software Certificate", "fullWidth": true }
+    ]
+  },
+  {
+    "images": [
       { "src": "./assets/images/cert-hubspot-salesforce-int.png", "alt": "HubSpot Academy: Salesforce Integration Certificate", "fullWidth": true }
     ]
   }
