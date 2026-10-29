@@ -169,6 +169,8 @@ body {
 
 iframe{
   margin: 10px 0;
+  width: 100%;
+  max-width: 600px;
 }
 
 /* MODALS */
@@ -333,7 +335,6 @@ footer {
     margin-right:auto;
   }
 }
-
 @media (max-width: 770px){
   .content-wrapper {
     padding-top:20px;
