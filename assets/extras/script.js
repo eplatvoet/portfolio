@@ -5,19 +5,11 @@ $(document).ready(function(){
 
         var sectionId = $(this).data('section-id');
         var $target = $('#' + sectionId);
+        var navHeight = $('.nav-bar').outerHeight();
+        var scrollTop = Math.max(0, $target.offset().top - navHeight - 15);
 
-        $('html, body').animate({
-            scrollTop: $target.offset().top - 25
-        }, 1250, function() {
-            // Temporarily store the current scroll position
-            var scrollTop = $target.offset().top - 50;
-
-            // Update the hash in the URL without affecting the scroll position
-            window.location.hash = sectionId;
-
-            // Restore the scroll position to prevent jump
-            $(window).scrollTop(scrollTop);
-        });
+        $('html, body').stop(true).animate({ scrollTop: scrollTop }, 700);
+        window.history.replaceState(null, '', '#' + sectionId);
     });
 
     // add functionality that depending on what section is active, the nav bar will be highlighted
@@ -28,7 +20,7 @@ $(document).ready(function(){
         }
         
         scrollTimeout = window.requestAnimationFrame(function() {
-            var scrollPosition = $(window).scrollTop() + 50; // Add offset for nav height
+            var scrollPosition = $(window).scrollTop() + $('.nav-bar').outerHeight() + 15;
             var sections = $('.sections');
             var currentSection = null;
             
@@ -63,7 +55,7 @@ $(document).ready(function(){
     }, {
         root: null,
         rootMargin: '0px',
-        threshold: 0.2
+        threshold: 0
     });
 
     sections.forEach(function(section, index) {
